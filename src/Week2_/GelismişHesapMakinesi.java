@@ -112,6 +112,23 @@ public class GelismişHesapMakinesi {
         System.out.println("Sonuç : " + result);
     }
 
+    static void mod() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz: ");
+        double dividend = scan.nextDouble();
+        System.out.print("Bir bölen giriniz: ");
+        double divisor = scan.nextDouble();
+
+        // Bölenin 0 olması durumunda hata mesajı vererek işlemi sonlandır
+        if (divisor == 0) {
+            System.out.println("Böleni 0 giremezsiniz.");
+            return;
+        }
+
+        double result = dividend % divisor;
+        System.out.println("Sonuç : " + result);
+    }
+
     static void calc() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Dikdörtgenin uzun kenarını giriniz: ");
@@ -133,7 +150,8 @@ public class GelismişHesapMakinesi {
                 + "4- Bölme işlemi\n"
                 + "5- Üslü Sayı Hesaplama\n"
                 + "6- Faktoriyel Hesaplama\n"
-                + "7- Dikdörtgen Alan ve Çevre Hesabı\n"
+                + "7- Mod Alma\n"
+                + "8- Dikdörtgen Alan ve Çevre Hesabı\n"
                 + "0- Çıkış Yap";
 
         do {
@@ -160,6 +178,9 @@ public class GelismişHesapMakinesi {
                     factorial();
                     break;
                 case 7:
+                    mod();
+                    break;
+                case 8:
                     calc();
                     break;
                 case 0:
