@@ -6,13 +6,20 @@ public class RecursiveÜslüSayi {
 
     // Recursive üs hesaplama fonksiyonu
     static int power(int a,int b) {
-        int result =1;
-        // Her bir üs değeri için tekrarlayan hesaplama
-        for(int i =1; i<=b; i++) {
-            result*=a;
+
+        // Eğer üs 0 ise, sonuç 1'dir (a*0 = 1)
+        if (b == 0) {
+            return 1;
         }
-        return result;
+        // Eğer üs 1 ise, sonuç tabanın kendisidir (a*1 = a)
+
+        if (b == 1) {
+            return a;
+        }
+        // Özyinelemeli olarak üs hesaplama
+        return a * power(a, b-1);
     }
+
 
 
     public static void main(String[] args) {
