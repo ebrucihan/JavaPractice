@@ -12,7 +12,7 @@ public class TryCatchBlog {
         System.out.print("Lütfen bir indeks giriniz: ");
         int index = input.nextInt();
 
-        // Metodu çağırma ve sonucu yazdırma
+        // Metodu çağırma
         getElementAtIndex(index);
     }
 
