@@ -1,5 +1,6 @@
 package Week5_.PatikaStore;
 
+// Notebook ürünlerini temsil eden sınıf
 public class NoteBook {
 
     String productName;
@@ -19,6 +20,8 @@ public class NoteBook {
         this.screen = screen;
         this.ram = ram;
     }
+
+    //Get-Set metodları
 
     public String getProductName() {
         return productName;
@@ -76,6 +79,7 @@ public class NoteBook {
         this.ram = ram;
     }
 
+    // Notebook bilgilerini formatlı bir şekilde döndüren metot
     @Override
     public String toString(){
         return String.format("| %-2d | %-29s | %-9s | %-8s | %-5d GB | %-6.1f inç | %-2d GB        |",ID,productName,price,brand,storage,screen,ram);

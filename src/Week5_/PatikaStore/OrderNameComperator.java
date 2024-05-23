@@ -2,6 +2,8 @@ package Week5_.PatikaStore;
 
 import java.util.Comparator;
 
+// Markaları alfabetik sıraya göre sıralamak için Comparator sınıfı
+
 public class OrderNameComperator implements Comparator<Brand>  {
 
 

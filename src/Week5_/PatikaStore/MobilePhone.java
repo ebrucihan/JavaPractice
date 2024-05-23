@@ -1,5 +1,6 @@
 package Week5_.PatikaStore;
 
+// Cep telefonu ürünlerini temsil eden sınıf
 public class MobilePhone {
 
     int ID;
@@ -26,6 +27,7 @@ public class MobilePhone {
         this.color = color;
     }
 
+    //Get-Set Metotları
     public int getID() {
         return ID;
     }
@@ -106,6 +108,7 @@ public class MobilePhone {
         this.color = color;
     }
 
+    // Cep telefonu bilgilerini formatlı bir şekilde döndüren metot
     @Override
     public String toString(){
         return String.format("| %-2d | %-30s | %-9s | %-10s | %-12s | %-8s | %-10s | %-11s | %-9s | %-8s |",ID,productName,price,brand,storage,screen,camera,battery,ram,color);

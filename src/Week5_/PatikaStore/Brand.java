@@ -1,5 +1,6 @@
 package Week5_.PatikaStore;
 
+// Markaları temsil eden sınıf
 public class Brand {
 
     private String name;
