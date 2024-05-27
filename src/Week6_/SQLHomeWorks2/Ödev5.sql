@@ -8,7 +8,7 @@ LIMIT 5;
 SELECT title FROM film
 WHERE title LIKE '%n'
 ORDER BY length ASC
-OFFSET 1
+OFFSET 5
 LIMIT 5;
 
 --3.soru
