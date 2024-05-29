@@ -8,5 +8,5 @@ SELECT  customer.first_name, customer.last_name, payment.payment_id  FROM custom
 INNER JOIN payment ON customer.customer_id = payment.customer_id;
 
 --3.soru
-SELECT customer.first_name, customer.last_name,rental.rental_id FROM customer
-INNER JOIN rental ON customer.customer_id = rental.rental_id;
+SELECT rental.rental_id,customer.customer_id,first_name,last_name FROM rental
+INNER JOIN customer ON rental.customer_id = customer.customer_id ;
