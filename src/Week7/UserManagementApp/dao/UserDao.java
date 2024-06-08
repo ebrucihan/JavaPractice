@@ -6,6 +6,7 @@ import Week7.UserManagementApp.entitiy.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class UserDao {
@@ -87,6 +88,20 @@ public class UserDao {
 
         return false;
 
+    }
+
+    public boolean delete(int id){
+        String query = "DELETE FROM public.brand WHERE brand_id = ?";
+        try {
+            PreparedStatement pr = this.connection.prepareStatement(query);
+            pr.setInt(1,id);
+            return pr.executeUpdate() != -1;
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return true;
     }
 
     public boolean save(User user){
