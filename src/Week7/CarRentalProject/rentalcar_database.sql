@@ -5,7 +5,7 @@
 -- Dumped from database version 13.15
 -- Dumped by pg_dump version 13.15
 
--- Started on 2024-06-08 15:21:06
+-- Started on 2024-06-08 17:26:55
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -181,91 +181,8 @@ ALTER TABLE public."user" ALTER COLUMN user_id ADD GENERATED ALWAYS AS IDENTITY 
 );
 
 
---
--- TOC entry 3022 (class 0 OID 16820)
--- Dependencies: 203
--- Data for Name: book; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
-COPY public.book (book_id, book_car_id, book_name, book_idno, book_mpno, book_mail, book_strt_date, book_fnsh_date, book_prc, book_note, book_case) FROM stdin;
-15	7	test test	12341234	05453417021	test@patika.dev	2023-10-10	2023-10-16	2350	not bırakıldı	done
-16	1	test2222	12341234	05453417021	test@patika.dev	2023-10-10	2023-10-16	2350	not bırakıldı	done
-\.
-
-
---
--- TOC entry 3024 (class 0 OID 16830)
--- Dependencies: 205
--- Data for Name: brand; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.brand (brand_id, brand_name) FROM stdin;
-8	Audi
-10	Fiat
-12	Mercedes
-13	BMW
-15	Renault
-16	Skoda
-17	Hyundai
-18	Toyota
-14	Volkswagen2
-11	Opel Güncel
-\.
-
-
---
--- TOC entry 3026 (class 0 OID 16840)
--- Dependencies: 207
--- Data for Name: car; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.car (car_id, car_model_id, car_color, car_km, car_plate) FROM stdin;
-3	10	GREEN	10000	81 KC 2049
-4	13	WHITE	15000	34 KB 1756
-1	8	RED	20000	06  DD 1547
-5	12	WHITE	70000	01 CC 5643
-6	14	AQUA	20000	34 BB 8264
-7	15	RED	65000	61 FD 6475
-\.
-
-
---
--- TOC entry 3028 (class 0 OID 16850)
--- Dependencies: 209
--- Data for Name: model; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.model (model_id, model_brand_id, model_name, model_type, model_year, model_fuel, model_gear) FROM stdin;
-8	11	Astra	SEDAN	2021	LPG	AUTO
-9	8	A5	SEDAN	2024	GASOLINE	MANUEL
-10	12	AMG	HATCHBACK	2021	ELECTRIC	AUTO
-13	14	Tiguan	HATCHBACK	2022	GASOLINE	MANUEL
-12	15	Clio	HATCHBACK	2021	DIESEL	AUTO
-11	10	Egea	SEDAN	2020	LPG	MANUEL
-14	16	Octavia	SEDAN	2024	LPG	AUTO
-15	17	i30	HATCHBACK	2020	DIESEL	AUTO
-16	18	Corolla	SEDAN	2019	GASOLINE	MANUEL
-\.
-
-
---
--- TOC entry 3019 (class 0 OID 16808)
--- Dependencies: 200
--- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public."user" (user_id, user_name, user_pass, user_role) FROM stdin;
-1	admin	1234	admin
-\.
-
-
---
--- TOC entry 3034 (class 0 OID 0)
--- Dependencies: 202
--- Name: book_book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.book_book_id_seq', 16, true);
+SELECT pg_catalog.setval('public.book_book_id_seq', 18, true);
 
 
 --
@@ -349,7 +266,7 @@ ALTER TABLE ONLY public."user"
     ADD CONSTRAINT user_pkey PRIMARY KEY (user_id);
 
 
--- Completed on 2024-06-08 15:21:07
+-- Completed on 2024-06-08 17:26:55
 
 --
 -- PostgreSQL database dump complete
